@@ -1,0 +1,218 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Veg Recipes</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fafafa;
+        }
+        header {
+            background-color: #d32f2f;
+            color: white;
+            text-align: center;
+            padding: 1.5em 0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #b71c1c;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+        }
+        nav a {
+            color: white;
+            padding: 16px 24px;
+            text-decoration: none;
+            text-align: center;
+            transition: background-color 0.3s;
+        }
+        nav a:hover {
+            background-color: #ff8a80;
+            color: #d32f2f;
+        }
+        .container {
+            padding: 40px;
+        }
+        .recipe-group {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .recipe-card {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+            width: 280px;
+            text-align: center;
+            cursor: pointer;
+            transition: transform 0.3s, background-color 0.3s;
+        }
+        .recipe-card:hover {
+            transform: scale(1.05);
+            background-color: #ffe0b2;
+        }
+        .recipe h2 {
+            color: #d32f2f;
+            font-size: 2.5em;
+            margin-bottom: 15px;
+        }
+        .recipe p {
+            color: #b71c1c;
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+        .recipe iframe {
+            width: 100%;
+            max-width: 600px;
+            height: 315px;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+        .recipe ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .recipe ul li {
+            margin: 8px 0;
+            color: #b71c1c;
+        }
+        .back-btn {
+            background-color: #d32f2f;
+            color: white;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            text-align: center;
+            font-size: 1.2em;
+            transition: background-color 0.3s;
+        }
+        .back-btn:hover {
+            background-color: #b71c1c;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Veg Recipes</h1>
+    </header>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="veg-recipes.html">Veg Recipes</a>
+        <a href="non-veg-recipes.html">Non-Veg Recipes</a>
+        <a href="about-us.html">About Us</a>
+        <a href="contact-us.html">Contact Us</a>
+    </nav>
+    <div class="container">
+        <!-- Recipe Group Selection -->
+        <div class="recipe-group">
+            <div class="recipe-card" onclick="showRecipe('paneer')">
+                <h3>Paneer Cutlet</h3>
+            </div>
+            <div class="recipe-card" onclick="showRecipe('kadhi')">
+                <h3>Kadhi</h3>
+            </div>
+            <div class="recipe-card" onclick="showRecipe('aloo-gobi')">
+                <h3>Aloo Gobi</h3>
+            </div>
+            <div class="recipe-card" onclick="showRecipe('baigan')">
+                <h3>Baigan Bharta</h3>
+            </div>
+            <div class="recipe-card" onclick="showRecipe('litti')">
+                <h3>Litti Chokha</h3>
+            </div>
+            <div class="recipe-card" onclick="showRecipe('daalbaati')">
+                <h3>Daal Baati Churma</h3>
+            </div>
+            <div class="recipe-card" onclick="showRecipe('chole')">
+                <h3>Chole Tikki</h3>
+            </div>
+        </div>
+
+        <!-- Kadhi Recipe -->
+        <div id="kadhi" class="recipe" style="display:none;">
+            <h2>Kadhi</h2>
+            <p>Kadhi is a yogurt-based curry, usually served with rice or chapati. It’s tangy, spicy, and comforting!</p>
+            <h3>Watch the Recipe:</h3>
+            <iframe src="https://www.youtube.com/embed/O40tzATn5do" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <button class="back-btn" onclick="backToGroup()">Back</button>
+        </div>
+
+        <!-- Aloo Gobi Recipe -->
+        <div id="aloo-gobi" class="recipe" style="display:none;">
+            <h2>Aloo Gobi</h2>
+            <p>Aloo Gobi is a simple and flavorful dish made with potatoes and cauliflower.</p>
+            <h3>Watch the Recipe:</h3>
+            <iframe src="https://www.youtube.com/embed/PhgyyJE90w8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <button class="back-btn" onclick="backToGroup()">Back</button>
+        </div>
+
+        <!-- Baigan Bharta Recipe -->
+        <div id="baigan" class="recipe" style="display:none;">
+            <h2>Baigan Bharta</h2>
+            <p>A smoky and delicious Baigan Bharta made with roasted eggplant and various spices.</p>
+            <h3>Watch the Recipe:</h3>
+            <iframe src="https://www.youtube.com/embed/WkE4oyMhxbg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <button class="back-btn" onclick="backToGroup()">Back</button>
+        </div>
+
+        <!-- Litti Chokha Recipe -->
+        <div id="litti" class="recipe" style="display:none;">
+            <h2>Litti Chokha</h2>
+            <p>Litti Chokha is a traditional Bihari dish made with wheat flour and stuffed with sattu, served with chokha (mashed vegetables).</p>
+            <h3>Watch the Recipe:</h3>
+            <iframe src="https://www.youtube.com/embed/CqF4iPq9000" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <button class="back-btn" onclick="backToGroup()">Back</button>
+        </div>
+
+        <!-- Daal Baati Churma Recipe -->
+        <div id="daalbaati" class="recipe" style="display:none;">
+            <h2>Daal Baati Churma</h2>
+            <p>A delicious Rajasthani dish consisting of baati (baked dough balls), daal (lentils), and churma (sweetened crushed wheat).</p>
+            <h3>Watch the Recipe:</h3>
+            <iframe src="https://www.youtube.com/embed/mZ4xTelTAGk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <button class="back-btn" onclick="backToGroup()">Back</button>
+        </div>
+
+        <!-- Chole Tikki Recipe -->
+        <div id="chole" class="recipe" style="display:none;">
+            <h2>Chole Tikki</h2>
+            <p>Chole Tikki is a popular street food consisting of crispy tikkis served with spicy chickpeas.</p>
+            <h3>Watch the Recipe:</h3>
+            <iframe src="https://www.youtube.com/embed/2qq5fmo54SE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <button class="back-btn" onclick="backToGroup()">Back</button>
+        </div>
+
+        <!-- Paneer Cutlet Recipe -->
+        <div id="paneer" class="recipe" style="display:none;">
+            <h2>Paneer Cutlet</h2>
+            <p>A crispy and delicious snack made with paneer and a mix of spices.</p>
+            <h3>Watch the Recipe:</h3>
+            <iframe src="https://www.youtube.com/embed/kUTpljz2VQk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <button class="back-btn" onclick="backToGroup()">Back</button>
+        </div>
+    </div>
+
+    <script>
+        function showRecipe(recipe) {
+            document.querySelectorAll('.recipe').forEach(function(recipeCard) {
+                recipeCard.style.display = 'none';
+            });
+            document.getElementById(recipe).style.display = 'block';
+        }
+
+        function backToGroup() {
+            document.querySelectorAll('.recipe').forEach(function(recipeCard) {
+                recipeCard.style.display = 'none';
+            });
+        }
+    </script>
+</body>
+</html>

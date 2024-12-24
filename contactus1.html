@@ -1,0 +1,187 @@
+<!DOCTYPE html>   
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <style>
+        /* General Styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+
+        /* Header Styling */
+        header {
+            background: linear-gradient(to right, #ff7e5f, #feb47b);
+            color: white;
+            text-align: center;
+            padding: 2em 0;
+        }
+
+        header h1 {
+            font-size: 3em;
+            margin: 0;
+        }
+
+        /* Navigation Bar Styling */
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #333;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        nav a {
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            text-align: center;
+            font-size: 1.1em;
+            transition: background-color 0.3s ease;
+        }
+
+        nav a:hover {
+            background-color: #feb47b;
+            color: #333;
+        }
+
+        /* Main Content Container */
+        .container {
+            padding: 30px;
+            max-width: 1200px;
+            margin: 20px auto;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Contact Info Styling */
+        ul {
+            list-style-type: none;
+        }
+
+        li {
+            margin: 10px 0;
+            font-size: 18px;
+        }
+
+        a {
+            color: #4CAF50;
+        }
+
+        a:hover {
+            color: #45a049;
+        }
+
+        /* Form Container Styling */
+        .form-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+        }
+
+        .form-container h2 {
+            margin-bottom: 20px;
+            font-size: 24px;
+            color: #444;
+        }
+
+        /* Form Input and Textarea Styling */
+        input[type="text"], textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        /* Submit Button Styling */
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+            }
+
+            .container {
+                padding: 15px;
+            }
+
+            button {
+                width: 100%;
+                padding: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Contact Us</h1>
+    </header>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="veg-recipes.html">Veg Recipes</a>
+        <a href="non-veg-recipes.html">Non-Veg Recipes</a>
+        <a href="about-us.html">About Us</a>
+        <a href="contact-us.html">Contact Us</a>
+    </nav>
+    <div class="container">
+        <p>If you have any questions, feedback, or want to get in touch, feel free to reach out to us:</p>
+        <ul>
+            <li><strong>Name:</strong> Harsha Yadav</li>
+            <li><strong>Email:</strong> <a href="mailto:harsha052k24@gmail.com">harsha052k24@gmail.com</a></li> 
+        </ul>
+        
+        <!-- Recipe Submission Form -->
+        <div class="form-container">
+            <h2>Submit Your Recipe</h2>
+            <form action="submit-recipe.php" method="post">
+                <label for="recipe-name">Recipe Name:</label>
+                <input type="text" id="recipe-name" name="recipe-name" required>
+                
+                <label for="ingredients">Ingredients:</label>
+                <textarea id="ingredients" name="ingredients" rows="4" required></textarea>
+                
+                <label for="instructions">Instructions:</label>
+                <textarea id="instructions" name="instructions" rows="6" required></textarea>
+                
+                <button type="submit">Submit Recipe</button>
+            </form>
+        </div>
+
+        <!-- Feedback Form -->
+        <div class="form-container">
+            <h2>Give Us Your Feedback</h2>
+            <form action="submit-feedback.php" method="post">
+                <label for="user-name">Your Name:</label>
+                <input type="text" id="user-name" name="user-name" required>
+
+                <label for="user-feedback">Your Feedback:</label>
+                <textarea id="user-feedback" name="user-feedback" rows="6" required></textarea>
+
+                <button type="submit">Submit Feedback</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

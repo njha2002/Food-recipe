@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Non-Veg Recipes</title>
+    <style>
+        /* General Body Styling */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        /* Header Styling */
+        header {
+            background: linear-gradient(to right, #ff6347, #ff4500);
+            color: white;
+            text-align: center;
+            padding: 50px 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            font-size: 3.5em;
+            margin: 0;
+        }
+
+        /* Navigation Styling */
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #333;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        nav a {
+            color: white;
+            padding: 20px 30px;
+            text-decoration: none;
+            font-size: 1.2em;
+            text-align: center;
+            transition: background-color 0.3s ease;
+        }
+
+        nav a:hover {
+            background-color: #ff6347;
+            color: #fff;
+        }
+
+        /* Recipe Group and Card Styling */
+        .container {
+            padding: 30px 20px;
+            text-align: center;
+        }
+
+        .recipe-group {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+
+        .recipe-card {
+            background-color: #ff4500;
+            color: white;
+            padding: 25px 20px;
+            border-radius: 12px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            width: 270px;
+            margin: 15px;
+            text-align: center;
+            cursor: pointer;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+            font-size: 1.1em;
+        }
+
+        .recipe-card:hover {
+            background-color: #ff6347;
+            transform: scale(1.1);
+        }
+
+        /* Recipe Content Styling */
+        .recipe h2 {
+            font-size: 2.5em;
+            color: #333;
+        }
+
+        .recipe p {
+            font-size: 1.3em;
+            color: #555;
+        }
+
+        .recipe iframe {
+            width: 100%;
+            max-width: 640px;
+            height: 350px;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+
+        .recipe ul {
+            list-style-type: none;
+            padding: 0;
+            font-size: 1.2em;
+        }
+
+        .recipe ul li {
+            margin: 10px 0;
+        }
+
+        /* Back Button Styling */
+        .back-btn {
+            background-color: #28a745;
+            color: white;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            margin-top: 20px;
+            text-align: center;
+            font-size: 1.1em;
+            transition: background-color 0.3s;
+        }
+
+        .back-btn:hover {
+            background-color: #218838;
+        }
+
+        /* Responsive Design for Smaller Screens */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.5em;
+            }
+
+            .recipe-card {
+                width: 230px;
+                font-size: 1.05em;
+            }
+
+            .back-btn {
+                font-size: 1em;
+                padding: 10px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Non-Veg Recipes</h1>
+    </header>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="veg-recipes.html">Veg Recipes</a>
+        <a href="non-veg-recipes.html">Non-Veg Recipes</a>
+        <a href="about-us.html">About Us</a>
+        <a href="contact-us.html">Contact Us</a>
+    </nav>
+    <div class="container">
+        <!-- Recipe Group Selection -->
+        <div class="recipe-group">
+            <div class="recipe-card" onclick="showRecipe('chicken-curry')">
+                <h3>Chicken Curry</h3>
+            </div>
+            <div class="recipe-card" onclick="showRecipe('fish-curry')">
+                <h3>Fish Curry</h3>
+            </div>
+            <div class="recipe-card" onclick="showRecipe('mutton-nihari')">
+                <h3>Mutton Nihari</h3>
+            </div>
+            <div class="recipe-card" onclick="showRecipe('egg-curry')">
+                <h3>Egg Curry</h3>
+            </div>
+        </div>
+
+        <!-- Chicken Curry Recipe -->
+        <div id="chicken-curry" class="recipe" style="display:none;">
+            <h2>Chicken Curry</h2>
+            <p>A flavorful chicken curry made with aromatic spices and a rich gravy. Perfect with rice or bread.</p>
+            <h3>Watch the Recipe:</h3>
+            <iframe src="https://www.youtube.com/embed/jwyge5daKUQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <button class="back-btn" onclick="backToGroup()">Back</button>
+        </div>
+
+        <!-- Fish Curry Recipe -->
+        <div id="fish-curry" class="recipe" style="display:none;">
+            <h2>Fish Curry</h2>
+            <p>A tangy and spicy fish curry made with fresh fish and a blend of spices. Ideal for fish lovers!</p>
+            <h3>Watch the Recipe:</h3>
+            <iframe src="https://www.youtube.com/embed/kEZWvkVeUOk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <button class="back-btn" onclick="backToGroup()">Back</button>
+        </div>
+
+        <!-- Mutton Nihari Recipe -->
+        <div id="mutton-nihari" class="recipe" style="display:none;">
+            <h2>Mutton Nihari</h2>
+            <p>Mutton Nihari is a rich, slow-cooked stew made with mutton, aromatic spices, and herbs.</p>
+            <h3>Watch the Recipe:</h3>
+            <iframe src="https://www.youtube.com/embed/axon9qBTmXc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <button class="back-btn" onclick="backToGroup()">Back</button>
+        </div>
+
+        <!-- Egg Curry Recipe -->
+        <div id="egg-curry" class="recipe" style="display:none;">
+            <h2>Egg Curry</h2>
+            <p>A simple and delicious curry made with boiled eggs and a spicy gravy base.</p>
+            <h3>Watch the Recipe:</h3>
+            <iframe src="https://www.youtube.com/embed/tSVGanB5Rco" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <button class="back-btn" onclick="backToGroup()">Back</button>
+        </div>
+    </div>
+
+    <script>
+        function showRecipe(recipe) {
+            document.querySelectorAll('.recipe').forEach(function(recipeCard) {
+                recipeCard.style.display = 'none';
+            });
+            document.getElementById(recipe).style.display = 'block';
+        }
+
+        function backToGroup() {
+            document.querySelectorAll('.recipe').forEach(function(recipeCard) {
+                recipeCard.style.display = 'none';
+            });
+        }
+    </script>
+</body>
+</html>

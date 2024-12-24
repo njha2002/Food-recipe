@@ -1,0 +1,149 @@
+<!DOCTYPE html>   
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Recipe Website</title>
+    <style>
+        /* General Body Styling */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fafafa;
+            color: #333;
+        }
+
+        /* Header Styling */
+        header {
+            background: linear-gradient(to right, #ff7e5f, #feb47b);
+            color: white;
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        header h1 {
+            font-size: 3em;
+            margin: 0;
+        }
+
+        header p {
+            font-size: 1.2em;
+            margin-top: 10px;
+        }
+
+        /* Navigation Styling */
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #333;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        nav a {
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            font-size: 1.1em;
+            text-align: center;
+            transition: background-color 0.3s ease;
+        }
+
+        nav a:hover {
+            background-color: #feb47b;
+            color: #333;
+        }
+
+        /* Main Container Styling */
+        .container {
+            padding: 30px 20px;
+            text-align: center;
+        }
+
+        .category {
+            margin: 20px 0;
+        }
+
+        /* Category Button Styling */
+        .category a {
+            background-color: #ff7e5f;
+            color: white;
+            font-size: 1.5em;
+            padding: 20px 40px;
+            text-decoration: none;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+
+        .category a:hover {
+            background-color: #feb47b;
+            color: #333;
+            transform: scale(1.05);
+        }
+
+        /* Back to Home Button Styling */
+        .nav-button {
+            display: inline-block;
+            background-color: #333;
+            color: white;
+            padding: 12px 24px;
+            font-size: 1.2em;
+            border-radius: 5px;
+            margin-top: 30px;
+            text-decoration: none;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .nav-button:hover {
+            background-color: #feb47b;
+            color: #333;
+            transform: scale(1.1);
+        }
+
+        /* Responsive Design for Smaller Screens */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.2em;
+            }
+
+            header p {
+                font-size: 1em;
+            }
+
+            .category a {
+                font-size: 1.2em;
+                padding: 15px 30px;
+            }
+
+            .nav-button {
+                font-size: 1em;
+                padding: 10px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to Our Food Recipe Website</h1>
+        <p>Explore Veg and Non-Veg recipes with videos</p>
+    </header>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="veg-recipes.html">Veg Recipes</a>
+        <a href="non-veg-recipes.html">Non-Veg Recipes</a>
+        <a href="about-us.html">About Us</a>
+        <a href="contact-us.html">Contact Us</a>
+    </nav>
+    <div class="container">
+        <h2>Explore Categories</h2>
+        <div class="category">
+            <a href="veg-recipes.html">Veg Recipes</a>
+        </div>
+        <div class="category">
+            <a href="non-veg-recipes.html">Non-Veg Recipes</a>
+        </div>
+    </div>
+    <a href="index.html" class="nav-button">Back to Home</a>
+</body>
+</html>
