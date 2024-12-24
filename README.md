@@ -1,2 +1,6 @@
-# food-recipe
-HTML Pages:  index.html - The main page providing navigation to other sections. veg.html - A dedicated page showcasing vegetarian recipes with interactive recipe cards and embedded video tutorials. CSS Styling:  website.css - Headers, footers, navigation, and forms. PHP Backend:  submit-recipe.php - Handles recipe submission data.
+A simple web project showcasing a recipe platform.
+
+Features:
+Veg Recipes Page: Interactive recipe cards with video tutorials.
+Responsive Design: Clean and adaptable UI styled with website.css.
+Backend Support: PHP script for submitting recipes.
